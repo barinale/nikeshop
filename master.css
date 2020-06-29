@@ -1,13 +1,21 @@
-*{padding:0;margin:0;}
+*{padding:0;margin:0;    font-family: Arial, Helvetica, sans-serif;}
 body{
   height:2000px;
 }
+a{text-decoration: none;}
+ul{list-style: none;}
 .wrap ,.sliderc,.slidercontent{
   height:100vh;
   width:100%;
   margin:0;
   padding:0;
     font-family: Arial, Helvetica, sans-serif;
+}
+.active{
+  background:#2AC991;
+  padding:0.3em;
+  border-radius: 5px;
+  transition: all 0.5s;
 }
 .slidercontent{
   display:flex;
@@ -16,7 +24,7 @@ body{
   text-align: center;
   flex-direction: column;
 }
-h2{
+header h2{
   color:white;
   font-size:2rem;
   text-transform: uppercase;
@@ -27,7 +35,7 @@ h2{
     100%{opacity:1;transform: scale(1);}
 
 }
-span{
+header span{
   font-size:5em;
   color:#fff;
   animation:tex 0.5s;
@@ -78,14 +86,14 @@ span{
   border-width: 30px 0 30px 30px;
   border-color:transparent transparent transparent #fff;
 }
-nav{
+header nav{
   position:absolute;
   left:50%;
   transform: translateX(-50%);
   width:80%;
   top:3%;
 }
-nav ul{
+header nav ul{
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -94,7 +102,7 @@ nav ul{
   border-radius: 2em;
   padding:.5em 1em;
 }
-nav ul a{
+header nav ul a{
   text-decoration: none;
   color:white;
   font-weight: 200;
@@ -104,12 +112,14 @@ nav ul a{
 .shownav{
   background:white;
   position:fixed;
-  width:100%;
   top:0;
   transition:top 0.1s;
   font-weight: 700;
+  border-radius: 20px;
+  z-index: 10;
+  border:1px solid blue;
 }
-#shownav a{
+.shownav a{
   color:black;
 }
 #buttontop{
@@ -120,9 +130,58 @@ nav ul a{
   display:none;
   border-radius: 50%;
   padding: .5em .5em;
-
 }
 #buttontop i{
   font-size: 3rem;
   color:#3EEC91;
+}
+/************************/
+#shop{
+  min-height:600px;
+  border:1px solid black;
+  width:90%;
+  margin:auto;
+}
+#shop .header{
+  text-align: center;
+}
+#shop .header *{
+  margin-top:7px;
+}
+#shop .header li{
+    display: inline-block;
+    padding:.2em .6em;
+}
+#shop .header li:not(:last-child){
+  border-right:1px solid black;
+}
+#shop .header li a{
+  color:blue;
+}
+#shop .items{
+  display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+#shop .item{
+  width:300px; 
+}
+#shop .item .image{
+  width:90%;
+  margin:auto;
+  height:200px;
+  overflow: hidden;
+}
+#shop .item .image img{
+  width:100%;
+  height:100%;
+  object-position: center center;
+  object-fit: fill;
+}
+
+/*******************/
+#about{
+  min-height:600px;
+  border:1px solid black;
+  width:90%;
+  margin:auto;
 }
