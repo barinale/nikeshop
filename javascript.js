@@ -88,6 +88,10 @@ shop.getBoundingClientRect().bottom>0+navmenu.offsetHeight){
     link[0].classList.add("active");
     link[1].classList.remove("active");
     link[2].classList.remove("active");
+  }
+  if(wrap.getBoundingClientRect().bottom<wind/3){
+    document.querySelector("#shop .items").style.opacity="1";
+    document.querySelector("#shop .items").style.bottom="0";
 
   }
 })

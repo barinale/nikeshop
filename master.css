@@ -159,11 +159,20 @@ header nav ul a{
   color:blue;
 }
 #shop .items{
+  margin-top:15px;
   display: grid;
     grid-template-columns:1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    opacity:0;
+    transition: all 0.5s;
+    position: relative;
+    bottom:-20%;
 }
 #shop .item{
-  width:300px; 
+  width:250px;
+  border:1px solid black;
+  border-radius: 15px;
 }
 #shop .item .image{
   width:90%;
@@ -177,6 +186,12 @@ header nav ul a{
   object-position: center center;
   object-fit: fill;
 }
+#shop .items .item .info{
+  text-align: center;
+}
+#shop .items .item .info h5 span{text-decoration: line-through;}
+
+#shop .items .item .info li{display: inline-block;color:blue;}
 
 /*******************/
 #about{
